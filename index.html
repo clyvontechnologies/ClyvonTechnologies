@@ -208,9 +208,7 @@
 
             <!-- Desktop Menu (Updated breakpoint to lg for tablet support) -->
             <div class="hidden lg:flex items-center space-x-8 text-sm font-medium text-gray-400">
-                <!-- Updated link to point to Reflex -->
-                <a href="#reflex" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Products</a>
-                <a href="#solutions" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Solutions</a>
+                <a href="#solutions" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Products & Services</a>
                 
                 <!-- Industries Dropdown -->
                 <div class="relative group">
@@ -281,7 +279,6 @@
         </button>
         
         <div class="flex flex-col items-center space-y-6 w-full max-w-sm">
-            <a href="#reflex" onclick="switchView('home'); closeMobileMenu()" class="text-2xl font-bold text-white hover:text-clyvon-accent transition-colors">Products</a>
             <a href="#solutions" onclick="switchView('home'); closeMobileMenu()" class="text-2xl font-bold text-white hover:text-clyvon-accent transition-colors">Solutions</a>
             
             <!-- Mobile Industries Accordion -->
@@ -327,13 +324,12 @@
                 </p>
 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up" style="animation-delay: 0.8s;">
-                    <!-- Functional Explore Products Button pointing to Reflex -->
-                    <a href="#reflex" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 inline-flex items-center justify-center">
-                        <span class="relative z-10 group-hover:text-white transition-colors">Explore Products</span>
+                    <button onclick="document.getElementById('solutions').scrollIntoView({behavior: 'smooth'})" class="group relative px-8 py-4 bg-white text-black font-bold rounded-full overflow-hidden transition-transform hover:scale-105 inline-flex items-center justify-center">
+                        <span class="relative z-10 group-hover:text-white transition-colors">Explore Catalogue</span>
                         <div class="absolute inset-0 bg-clyvon-accent transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
-                    </a>
-                    <button class="px-8 py-4 border border-white/20 hover:border-white text-white font-medium rounded-full transition-all hover:bg-white/5 backdrop-blur-sm">
-                        View Solutions
+                    </button>
+                    <button onclick="switchView('about')" class="px-8 py-4 border border-white/20 hover:border-white text-white font-medium rounded-full transition-all hover:bg-white/5 backdrop-blur-sm">
+                        Company Vision
                     </button>
                 </div>
             </div>
@@ -367,287 +363,91 @@
             </div>
         </section>
 
-        <!-- Main Solutions Grid -->
+        <!-- Products & Services Catalogue -->
         <section id="solutions" class="py-24 relative bg-clyvon-black overflow-hidden">
              <!-- Background Ambient Glow -->
             <div class="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-clyvon-secondary/20 rounded-full blur-[128px] pointer-events-none"></div>
             <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-clyvon-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+                <div class="mb-16 flex flex-col md:flex-row justify-between items-end gap-6 border-b border-white/10 pb-8">
                     <div>
-                        <span class="text-clyvon-accent font-mono text-xs tracking-widest uppercase mb-2 block">Our Expertise</span>
-                        <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Core Ecosystem</h2>
+                        <span class="text-clyvon-accent font-mono text-xs tracking-widest uppercase mb-2 block">Our Offerings</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tight">Products & Services</h2>
                     </div>
                     <p class="text-gray-400 max-w-md text-sm md:text-base leading-relaxed text-right md:text-left">
-                        We architect the nervous system of the future. From edge to cloud, our solutions define the autonomous era.
+                        Explore our cutting-edge hardware and autonomous solutions designed for the next generation of industrial intelligence.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[650px]">
-                    <!-- Robotics (Large, Interactive) -->
-                    <div class="md:col-span-2 md:row-span-2 frosted-card rounded-3xl p-8 md:p-10 flex flex-col justify-between group overflow-hidden relative">
-                         <!-- Dynamic Background Grid -->
-                        <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
-                        <div class="relative z-10">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-white/10 to-white/5 border border-white/10 flex items-center justify-center mb-6 text-clyvon-accent group-hover:scale-110 transition-transform duration-500 shadow-lg shadow-clyvon-accent/10">
-                                <i class="fa-solid fa-robot text-2xl"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Product: Strider -->
+                    <div class="frosted-card rounded-xl p-0 overflow-hidden group flex flex-col h-full hover:border-clyvon-accent/50 transition-all duration-300">
+                        <div class="h-56 bg-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                             <!-- Abstract tech background -->
+                             <div class="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-black"></div>
+                             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20"></div>
+                             <i class="fa-solid fa-water-ladder absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl text-white/10 group-hover:text-clyvon-accent transition-colors duration-500"></i>
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#0a0a0a]">
+                            <div class="text-clyvon-accent text-xs font-mono font-bold tracking-widest mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-microchip"></i> HARDWARE PLATFORM
                             </div>
-                            <h3 class="text-3xl md:text-4xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-clyvon-accent transition-all">Advanced Robotics</h3>
-                            <p class="text-gray-400 max-w-md text-lg font-light leading-relaxed group-hover:text-gray-300 transition-colors">
-                                Precision motion control systems and autonomous navigation modules designed for the next generation of industrial automation.
-                            </p>
-                        </div>
-                        <div class="absolute bottom-[-20px] right-[-20px] w-80 h-80 opacity-60 transition-transform duration-700 group-hover:rotate-12 group-hover:scale-110">
-                            <div class="absolute inset-0 border border-clyvon-accent/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-                            <div class="absolute inset-4 border border-clyvon-secondary/30 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
-                            <div class="absolute top-1/2 left-1/2 w-40 h-40 bg-clyvon-accent/10 blur-2xl transform -translate-x-1/2 -translate-y-1/2"></div>
-                        </div>
-                         <div class="mt-8 flex flex-wrap gap-3 relative z-10">
-                             <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-300 hover:bg-white/10 transition-colors">Servo Drives</span>
-                             <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-300 hover:bg-white/10 transition-colors">LiDAR Integration</span>
-                             <span class="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs font-mono text-gray-300 hover:bg-white/10 transition-colors flex items-center gap-2">
-                                <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> Live API
-                             </span>
-                        </div>
-                    </div>
-
-                    <!-- AI Infrastructure -->
-                    <div class="frosted-card rounded-3xl p-8 flex flex-col justify-between group">
-                        <div class="flex justify-between items-start">
-                            <div class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-purple-400 group-hover:text-purple-300 transition-colors">
-                                <i class="fa-solid fa-server text-xl"></i>
-                            </div>
-                            <div class="flex gap-1">
-                                <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
-                                <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
-                                <div class="w-1 h-1 bg-gray-600 rounded-full"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2 text-white">HPC Infrastructure</h3>
-                            <p class="text-xs text-gray-400 mb-4 font-mono">Liquid-cooled racks for LLM training.</p>
-                             <div class="space-y-2">
-                                <div class="flex justify-between text-[10px] text-gray-500 font-mono uppercase">
-                                    <span>Load</span>
-                                    <span class="text-purple-400">98%</span>
-                                </div>
-                                <div class="w-full h-1.5 bg-gray-800 rounded-full overflow-hidden">
-                                    <div class="h-full bg-gradient-to-r from-purple-600 to-purple-400 w-[98%] rounded-full shadow-[0_0_10px_rgba(168,85,247,0.5)]"></div>
-                                </div>
-                                <div class="flex justify-between text-[10px] text-gray-500 font-mono uppercase mt-1">
-                                    <span>Temp</span>
-                                    <span class="text-blue-400">42°C</span>
-                                </div>
-                                <div class="w-full h-1.5 bg-gray-800 rounded-full overflow-hidden">
-                                    <div class="h-full bg-blue-500 w-[40%] rounded-full"></div>
-                                </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Clyvon Strider</h3>
+                            <p class="text-gray-400 text-sm mb-8 flex-1 leading-relaxed">Autonomous surface vehicle for environmental monitoring. Equipped with multi-parameter sensors and LTE telemetry for real-time data acquisition.</p>
+                            <div class="mt-auto">
+                                <button onclick="openModal('contact-modal')" class="w-full py-3 border border-white/20 rounded-lg text-white font-bold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2 group/btn">
+                                    Buy Product <i class="fa-solid fa-arrow-right transform -rotate-45 group-hover/btn:rotate-0 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Edge Computing -->
-                    <div class="frosted-card rounded-3xl p-8 flex flex-col justify-center items-center text-center group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-t from-clyvon-secondary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        <div class="relative w-20 h-20 mb-6 flex items-center justify-center">
-                            <div class="absolute inset-0 bg-clyvon-accent/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                            <i class="fa-solid fa-microchip text-4xl text-white relative z-10 group-hover:scale-110 transition-transform duration-300"></i>
-                            <div class="absolute inset-0 animate-[spin_4s_linear_infinite] border border-dashed border-white/20 rounded-full"></div>
+                    <!-- Service: Scanning -->
+                    <div class="frosted-card rounded-xl p-0 overflow-hidden group flex flex-col h-full hover:border-green-400/50 transition-all duration-300">
+                         <div class="h-56 bg-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                             <div class="absolute inset-0 bg-gradient-to-br from-green-900/40 to-black"></div>
+                             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20"></div>
+                             <i class="fa-solid fa-chart-line absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl text-white/10 group-hover:text-green-400 transition-colors duration-500"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2 text-white">Edge AI</h3>
-                        <p class="text-xs text-gray-400 max-w-[200px]">Real-time inference engines deployed at the source.</p>
-                         <a href="#" class="mt-4 text-xs font-bold text-clyvon-accent hover:text-white transition-colors flex items-center gap-1 group-hover:gap-2">
-                            View Specs <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#0a0a0a]">
+                            <div class="text-green-400 text-xs font-mono font-bold tracking-widest mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-satellite-dish"></i> MANAGED SERVICE
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Aquatic Analytics</h3>
+                            <p class="text-gray-400 text-sm mb-8 flex-1 leading-relaxed">On-demand water body health scanning. Receive comprehensive PDF reports with pollution hotspots and remediation data without owning hardware.</p>
+                            <div class="mt-auto">
+                                <button onclick="openModal('strider-service-modal')" class="w-full py-3 bg-clyvon-accent text-black rounded-lg font-bold hover:bg-white transition-colors flex items-center justify-center gap-2">
+                                    Book Scan <i class="fa-solid fa-calendar-check"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Automation & Networking -->
-                    <div class="md:col-span-3 frosted-card rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 group">
-                        <div class="flex items-center gap-6">
-                            <div class="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex-shrink-0 flex items-center justify-center relative overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
-                                <i class="fa-solid fa-network-wired text-2xl text-white group-hover:text-clyvon-accent transition-colors"></i>
+                    <!-- Service: Custom Engineering (Filler for catalogue look) -->
+                    <div class="frosted-card rounded-xl p-0 overflow-hidden group flex flex-col h-full hover:border-purple-400/50 transition-all duration-300">
+                         <div class="h-56 bg-gray-900 relative overflow-hidden group-hover:scale-105 transition-transform duration-700">
+                             <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-black"></div>
+                             <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20"></div>
+                             <i class="fa-solid fa-layer-group absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-7xl text-white/10 group-hover:text-purple-400 transition-colors duration-500"></i>
+                        </div>
+                        <div class="p-8 flex-1 flex flex-col border-t border-white/5 bg-[#0a0a0a]">
+                            <div class="text-purple-400 text-xs font-mono font-bold tracking-widest mb-3 flex items-center gap-2">
+                                <i class="fa-solid fa-pen-ruler"></i> CUSTOM ENGINEERING
                             </div>
-                            <div>
-                                <h3 class="text-2xl font-bold mb-1 text-white">HyperMesh Networking</h3>
-                                <p class="text-gray-400 text-sm">Software-Defined Networking (SDN) & Industrial IoT Gateways with sub-millisecond latency.</p>
+                            <h3 class="text-2xl font-bold text-white mb-4">Embedded Design</h3>
+                            <p class="text-gray-400 text-sm mb-8 flex-1 leading-relaxed">End-to-end hardware development services. From PCB layout to firmware optimization for custom AI-edge devices and robotic platforms.</p>
+                            <div class="mt-auto">
+                                <button onclick="openModal('contact-modal')" class="w-full py-3 border border-white/20 rounded-lg text-white font-bold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2 group/btn">
+                                    Consult Us <i class="fa-solid fa-arrow-right transform -rotate-45 group-hover/btn:rotate-0 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
-                        <button class="flex-shrink-0 px-6 py-3 rounded-full bg-white text-black font-bold text-sm hover:bg-clyvon-accent transition-colors flex items-center gap-2 group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)]">
-                            Explore Architecture
-                            <i class="fa-solid fa-arrow-right transform -rotate-45 group-hover:rotate-0 transition-transform duration-300"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- NEW: Clyvon REFLEX Flagship Section -->
-        <section id="reflex" class="py-24 relative bg-black overflow-hidden border-t border-white/5 scroll-mt-20">
-            <!-- Background Elements -->
-            <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-clyvon-panel to-transparent opacity-50"></div>
-            <div class="absolute top-1/2 right-1/4 w-96 h-96 bg-clyvon-accent/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-            <div class="max-w-7xl mx-auto px-6 relative z-10">
-                <div class="flex flex-col lg:flex-row items-center gap-16">
-                    <!-- Text Content -->
-                    <div class="flex-1 space-y-8">
-                        <div>
-                            <span class="text-clyvon-accent font-mono text-xs tracking-widest uppercase mb-2 block">Our First Product</span>
-                            <h2 class="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-4">
-                                CLYVON <span class="text-transparent bg-clip-text bg-gradient-to-r from-clyvon-accent to-white">REFLEX</span>
-                            </h2>
-                            <p class="text-xl text-gray-400 font-light max-w-xl">
-                                The "Bolt-On Brain" for industrial machines. A rugged, retrofittable appliance that detects anomalies and cuts power in <span class="text-white font-bold">&lt;15ms</span>.
-                            </p>
-                            <p class="text-sm text-gray-500 max-w-lg mt-2 font-mono">
-                                "To give every industrial machine a subconscious brain."
-                            </p>
-                        </div>
-
-                        <!-- Organ Theory / Features Grid -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-clyvon-accent/30 transition-colors group">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <i class="fa-solid fa-brain text-clyvon-accent"></i>
-                                    <h4 class="font-bold text-white">Neural Core</h4>
-                                </div>
-                                <p class="text-sm text-gray-500">Proprietary heterogeneous compute engine delivering immense AI density at the edge.</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-clyvon-accent/30 transition-colors group">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <i class="fa-solid fa-bolt text-yellow-400"></i>
-                                    <h4 class="font-bold text-white">15ms Reflex</h4>
-                                </div>
-                                <p class="text-sm text-gray-500">Photon-to-relay latency faster than a human blink. Absolute mechanical intervention.</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-clyvon-accent/30 transition-colors group">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <i class="fa-solid fa-shield-halved text-green-400"></i>
-                                    <h4 class="font-bold text-white">Sentinel Shield</h4>
-                                </div>
-                                <p class="text-sm text-gray-500">Independent hardware watchdog architecture. If the brain blinks, the shield acts.</p>
-                            </div>
-                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-clyvon-accent/30 transition-colors group">
-                                <div class="flex items-center gap-3 mb-2">
-                                    <i class="fa-solid fa-wand-magic-sparkles text-gray-300"></i>
-                                    <h4 class="font-bold text-white">Zero-Code Studio</h4>
-                                </div>
-                                <p class="text-sm text-gray-500">Seamless touch interface. Learns "Normal" behavior in seconds, not months.</p>
-                            </div>
-                        </div>
-
-                        <div class="flex gap-4 pt-4">
-                            <button onclick="openModal('contact-modal')" class="px-8 py-4 bg-clyvon-accent text-black font-bold rounded-full hover:bg-white transition-colors">
-                                Pre-order Pilot
-                            </button>
-                            <button class="px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-colors">
-                                Technical Specs
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Product Visual -->
-                    <div class="flex-1 relative flex justify-center items-center perspective-1000">
-                        <!-- Abstract Representation of the Box -->
-                        <div class="relative w-80 h-96 bg-gradient-to-br from-gray-800 to-black rounded-[2rem] border border-white/10 shadow-2xl flex flex-col items-center justify-center p-8 transform rotate-y-12 rotate-x-6 hover:rotate-0 transition-transform duration-700 group">
-                             <!-- Metallic Texture Overlay -->
-                             <div class="absolute inset-0 rounded-[2rem] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+')] opacity-20 pointer-events-none"></div>
-                            
-                            <!-- Halo Ring -->
-                            <div class="w-40 h-40 rounded-full border-8 border-gray-800 shadow-[0_0_50px_rgba(0,240,255,0.15)] flex items-center justify-center relative mb-12 bg-black">
-                                 <!-- Status Light Ring -->
-                                 <div class="absolute inset-0 rounded-full border-2 border-t-clyvon-accent border-r-clyvon-accent/50 border-b-transparent border-l-transparent animate-[spin_3s_linear_infinite]"></div>
-                                 <div class="w-32 h-32 bg-gray-900 rounded-full flex items-center justify-center shadow-inner">
-                                    <div class="w-24 h-24 bg-black rounded-full flex items-center justify-center border border-white/5">
-                                        <div class="w-3 h-3 bg-clyvon-accent rounded-full shadow-[0_0_20px_#00f0ff] animate-pulse"></div>
-                                    </div>
-                                 </div>
-                            </div>
-                            
-                            <!-- Branding -->
-                            <div class="text-center">
-                                <div class="text-2xl font-bold text-white tracking-[0.2em] group-hover:text-clyvon-accent transition-colors">CLYVON</div>
-                                <div class="text-[10px] text-gray-500 font-mono mt-2 tracking-widest">REFLEX // MODEL 01</div>
-                            </div>
-
-                            <!-- Ports visual at bottom -->
-                            <div class="absolute bottom-0 w-full flex justify-center gap-4 pb-8">
-                                 <div class="w-8 h-1.5 bg-gray-700 rounded-full"></div>
-                                 <div class="w-8 h-1.5 bg-gray-700 rounded-full"></div>
-                                 <div class="w-8 h-1.5 bg-gray-700 rounded-full"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Background decorative lines -->
-                        <div class="absolute -z-10 w-[500px] h-[500px] border border-white/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
-                        <div class="absolute -z-10 w-[350px] h-[350px] border border-white/5 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKU/Products Slider Section (Added ID for navigation) -->
-        <section id="products" class="py-24 bg-clyvon-dark overflow-hidden scroll-mt-20">
-            <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
-                <div>
-                    <span class="text-clyvon-accent font-mono text-sm">HARDWARE</span>
-                    <h2 class="text-4xl font-bold mt-2">Other Featured SKUs</h2>
-                </div>
-                <a href="#" class="text-sm border-b border-gray-600 pb-1 hover:text-clyvon-accent hover:border-clyvon-accent transition-all">View Full Catalog</a>
-            </div>
-
-            <!-- Horizontal Scroll Container -->
-            <div class="flex gap-6 px-6 overflow-x-auto pb-8 snap-x">
-                <!-- Product 1 -->
-                <div class="min-w-[300px] md:min-w-[350px] glass-panel p-6 rounded-xl border border-white/5 snap-center hover:border-clyvon-accent/50 transition-colors cursor-pointer group">
-                    <div class="h-40 bg-gradient-to-b from-gray-800 to-black rounded-lg mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9IkQwIDQwaDQwVjBIMHY0MHptMS0xVjFoMzh2MzhIMXoiIGZpbGw9IiMzMzMiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
-                        <i class="fa-solid fa-memory text-6xl text-gray-700 group-hover:text-clyvon-accent transition-colors duration-500"></i>
-                    </div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-lg">N-Core X1</h4>
-                        <span class="text-xs bg-clyvon-accent text-black px-2 py-0.5 rounded font-bold">NEW</span>
-                    </div>
-                    <p class="text-sm text-gray-400 mb-4">Neural Processing Unit for Edge AI Inference.</p>
-                    <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                        <span class="text-mono text-xs text-gray-500">SKU: CLV-9001</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-                 <!-- Product 2 -->
-                <div class="min-w-[300px] md:min-w-[350px] glass-panel p-6 rounded-xl border border-white/5 snap-center hover:border-clyvon-accent/50 transition-colors cursor-pointer group">
-                    <div class="h-40 bg-gradient-to-b from-gray-800 to-black rounded-lg mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9IkQwIDQwaDQwVjBIMHY0MHptMS0xVjFoMzh2MzhIMXoiIGZpbGw9IiMzMzMiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
-                        <i class="fa-solid fa-network-wired text-6xl text-gray-700 group-hover:text-purple-500 transition-colors duration-500"></i>
-                    </div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-lg">HyperMesh Gateway</h4>
-                    </div>
-                    <p class="text-sm text-gray-400 mb-4">Industrial IoT Gateway with 5G redundancy.</p>
-                    <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                        <span class="text-mono text-xs text-gray-500">SKU: CLV-NET-5G</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="min-w-[300px] md:min-w-[350px] glass-panel p-6 rounded-xl border border-white/5 snap-center hover:border-clyvon-accent/50 transition-colors cursor-pointer group">
-                    <div class="h-40 bg-gradient-to-b from-gray-800 to-black rounded-lg mb-6 flex items-center justify-center relative overflow-hidden">
-                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9IkQwIDQwaDQwVjBIMHY0MHptMS0xVjFoMzh2MzhIMXoiIGZpbGw9IiMzMzMiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9nPjwvc3ZnPg==')] opacity-20"></div>
-                        <i class="fa-solid fa-microchip text-6xl text-gray-700 group-hover:text-blue-500 transition-colors duration-500"></i>
-                    </div>
-                    <div class="flex justify-between items-start mb-2">
-                        <h4 class="font-bold text-lg">Titan Blade Server</h4>
-                    </div>
-                    <p class="text-sm text-gray-400 mb-4">High density compute blade for data centers.</p>
-                    <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                        <span class="text-mono text-xs text-gray-500">SKU: CLV-SRV-BLD</span>
-                        <i class="fa-solid fa-chevron-right text-xs"></i>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <!-- === END HOME VIEW === -->
 
@@ -867,7 +667,8 @@
                 <div>
                     <label class="block text-xs font-mono text-gray-500 mb-1">SUBJECT</label>
                     <select class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
-                        <option>Product Inquiry</option>
+                        <option>Product Inquiry - Clyvon Strider</option>
+                        <option>Product Inquiry - Other</option>
                         <option>Technical Support</option>
                         <option>Partnership</option>
                         <option>Other</option>
@@ -879,6 +680,87 @@
                 </div>
                 <button type="button" class="w-full bg-clyvon-accent text-black font-bold py-3 rounded-lg hover:bg-white transition-colors">
                     Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- === STRIDER SERVICE MODAL (NEW) === -->
+    <div id="strider-service-modal" class="modal-overlay fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm">
+        <div class="modal-content w-full max-w-2xl p-8 modal-glass rounded-3xl relative mx-4 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('strider-service-modal')" class="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <div class="mb-8 flex items-center gap-4 border-b border-white/10 pb-6">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center text-clyvon-accent">
+                    <i class="fa-solid fa-satellite-dish text-xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-white">Book Strider Service</h3>
+                    <p class="text-gray-400 text-sm">Schedule an autonomous water health scan.</p>
+                </div>
+            </div>
+
+            <form class="space-y-6">
+                <!-- Authorizer Details -->
+                <div>
+                    <h4 class="text-clyvon-accent text-xs font-mono uppercase tracking-widest mb-4">Authorizer Details</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">FULL NAME</label>
+                            <input type="text" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">ORGANIZATION / AUTHORITY</label>
+                            <input type="text" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">EMAIL</label>
+                            <input type="email" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">PHONE</label>
+                            <input type="tel" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Site Details -->
+                <div>
+                    <h4 class="text-clyvon-accent text-xs font-mono uppercase tracking-widest mb-4">Water Body Details</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                         <div class="md:col-span-2">
+                            <label class="block text-xs font-mono text-gray-500 mb-1">LOCATION (Address / Coordinates)</label>
+                            <div class="relative">
+                                <input type="text" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all pl-10">
+                                <i class="fa-solid fa-location-dot absolute left-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">ESTIMATED SIZE (Acres/Sq.km)</label>
+                            <input type="text" class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all" placeholder="e.g. 5 acres">
+                        </div>
+                         <div>
+                            <label class="block text-xs font-mono text-gray-500 mb-1">WATER TYPE</label>
+                            <select class="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white text-sm focus:border-clyvon-accent focus:outline-none transition-all">
+                                <option>Lake / Pond</option>
+                                <option>River Segment</option>
+                                <option>Reservoir</option>
+                                <option>Industrial Effluent Tank</option>
+                                <option>Coastal / Estuary</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 bg-blue-500/10 border border-blue-500/20 p-4 rounded-lg">
+                    <i class="fa-solid fa-circle-info text-blue-400"></i>
+                    <p class="text-xs text-blue-200">Our team will conduct a feasibility study based on these details before confirmation.</p>
+                </div>
+
+                <button type="button" class="w-full bg-clyvon-accent text-black font-bold py-4 rounded-lg hover:bg-white transition-colors text-lg shadow-[0_0_20px_rgba(0,240,255,0.2)]">
+                    Submit Service Request
                 </button>
             </form>
         </div>
@@ -926,7 +808,7 @@
             <div class="flex items-start gap-3">
                 <div class="w-6 h-6 rounded-full bg-white/10 flex-shrink-0 flex items-center justify-center text-[10px]">AI</div>
                 <div class="bg-white/10 text-gray-200 text-sm p-3 rounded-2xl rounded-tl-none max-w-[85%] border border-white/5">
-                    Hello! I'm Clyvon's virtual assistant. Ask me about the <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('Tell me about Reflex')">Reflex</span>, our <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('What industries do you serve?')">Industries</span>, or <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('How can I contact support?')">Support</span>.
+                    Hello! I'm Clyvon's virtual assistant. Ask me about <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('Tell me about Clyvon Strider')">Clyvon Strider</span>, our <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('What industries do you serve?')">Industries</span>, or <span class="text-clyvon-accent font-bold cursor-pointer hover:underline" onclick="sendQuickMessage('How can I contact support?')">Support</span>.
                 </div>
             </div>
         </div>
@@ -988,9 +870,9 @@
                 <div>
                     <h4 class="text-white font-bold mb-6">Solutions</h4>
                     <ul class="space-y-4 text-gray-500 text-sm">
-                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Robotics</a></li>
-                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">AI Infrastructure</a></li>
-                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Edge Computing</a></li>
+                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Clyvon Strider</a></li>
+                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Aquatic Analytics</a></li>
+                        <li><a href="#" onclick="switchView('home')" class="hover:text-clyvon-accent transition-colors">Custom Engineering</a></li>
                     </ul>
                 </div>
 
@@ -1195,11 +1077,11 @@
         function generateBotResponse(input) {
             const lowerInput = input.toLowerCase();
 
-            if (lowerInput.includes('reflex') || lowerInput.includes('product')) {
-                return "The Clyvon REFLEX is our flagship 'Bolt-On Brain' for industrial machines. It detects anomalies and cuts power in <15ms using a proprietary Neural Core. Would you like to see the <a href='#reflex' onclick='toggleChat()' class='text-clyvon-accent hover:underline'>Technical Specs</a>?";
+            if (lowerInput.includes('strider') || lowerInput.includes('aquatic') || lowerInput.includes('monitor') || lowerInput.includes('water')) {
+                return "The **Clyvon Strider** provides autonomous robotic scanning of waterbodies. It generates detailed reports with pinpointed pollution hotspots. You can <a href='#' onclick='openModal(\"contact-modal\"); toggleChat()' class='text-clyvon-accent hover:underline'>Buy the Product</a> or <a href='#' onclick='openModal(\"strider-service-modal\"); toggleChat()' class='text-clyvon-accent hover:underline'>Book a Service Scan</a>.";
             }
             if (lowerInput.includes('price') || lowerInput.includes('cost') || lowerInput.includes('buy')) {
-                return "For pricing on pilot programs and volume deployments of the Reflex, please contact our sales team directly. You can use the 'Contact' button in the menu.";
+                return "For pricing on pilot programs and volume deployments, please contact our sales team directly. You can use the 'Contact' button in the menu.";
             }
             if (lowerInput.includes('contact') || lowerInput.includes('support') || lowerInput.includes('email')) {
                 return "You can reach our support team via the <a href='#' onclick='openModal(\"contact-modal\"); toggleChat()' class='text-clyvon-accent hover:underline'>Contact Form</a> or email us at support@clyvon.com.";
@@ -1402,4 +1284,3 @@
     </script>
 </body>
 </html>
-
